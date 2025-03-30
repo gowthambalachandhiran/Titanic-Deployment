@@ -11,7 +11,7 @@ import xgboost as xgb
 import pickle
 #This is for the commit
 # Load the XGBoost model
-with open('./models/xgboost', 'rb') as model_file:
+with open('./Model Store/xgboost', 'rb') as model_file:
     model = pickle.load(model_file)
 
 # Title and instructions
