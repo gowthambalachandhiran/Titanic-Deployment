@@ -33,7 +33,7 @@ jobs:
       run: |
         aws ssm send-command \
           --document-name "AWS-RunShellScript" \
-          --targets "Key=instanceIds,Values=${{ secrets.INSTANCE_ID }}" \
+          --targets "Key=instanceIds,Values=${{ secrets.EC2_INSTANCE_ID }}" \
           --parameters 'commands=[
             "docker stop streamlit-container || true",
             "docker rm streamlit-container || true",
